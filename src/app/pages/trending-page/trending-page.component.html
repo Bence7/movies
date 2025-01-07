@@ -1,0 +1,10 @@
+@if (movies$ | async; as movies) {
+    <app-movie-list>
+        @for (movieItem of movies; track $index) {
+            <app-movie-item
+                [routerLink]="movieItem.routerLink"
+                [vm]="movieItem"
+            />
+        }
+    </app-movie-list>
+}

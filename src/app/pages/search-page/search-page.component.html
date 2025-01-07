@@ -1,0 +1,6 @@
+<input [appElementRef]="searchInput" type="search" class="border-2 border-black" [formControl]="searchBar" />
+<app-movie-list>
+    @for (item of movies$ | async; track $index) {
+    <app-movie-item [vm]="item" />
+    }
+</app-movie-list>

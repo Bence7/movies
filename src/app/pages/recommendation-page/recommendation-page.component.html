@@ -1,0 +1,5 @@
+<app-movie-list>
+    @for (item of movies$ | async; track $index) {
+        <app-movie-item [vm]="item" />
+    }
+</app-movie-list>
